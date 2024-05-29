@@ -1,5 +1,5 @@
 # Changing default shell
-chsh $USER -s /bin/bash
+chsh "$USER" -s /bin/bash
 /bin/bash
 
 # Updating all Pamac packages
@@ -14,6 +14,8 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 terminal_profile_id=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/$terminal_profile_id/ default-size-columns 511
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/$terminal_profile_id/ default-size-rows 511
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/"$terminal_profile_id"/ default-size-columns 511
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/"$terminal_profile_id"/ default-size-rows 511
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt>Shift_L']"
@@ -76,4 +78,4 @@ git clone git@github.com:igrikus/LazyVim.git ~/.config/nvim
 sudo systemctl enable --now docker.service
 sudo systemctl enable --now containerd.service
 sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
