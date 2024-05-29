@@ -12,8 +12,6 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ paste '<Primary>v'
 
 terminal_profile_id=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]'")
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/$terminal_profile_id/ default-size-columns 511
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/$terminal_profile_id/ default-size-rows 511
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/"$terminal_profile_id"/ default-size-columns 511
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/"$terminal_profile_id"/ default-size-rows 511
 
@@ -67,6 +65,7 @@ sudo pamac install \
 	aws-cli-v2-bin \
 	fd \
 	lazygit \
+	ripgrep \
 	npm \
 	go \
 	xclip \
