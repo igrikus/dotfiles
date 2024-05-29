@@ -88,4 +88,8 @@ gext install clipboard-indicator@tudmotu.com
 
 export GSETTINGS_SCHEMA_DIR=~/.local/share/gnome-shell/extensions/clipboard-indicator\@tudmotu.com/schemas/
 gsettings set org.gnome.shell.extensions.clipboard-indicator move-item-first true
-gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu
+gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu "['<Super>v']"
+
+wget -O "$HOME/Downloads/gestures.zip" "https://github.com/sidevesh/gnome-gesture-improvements--transpiled/releases/download/30/gestureImprovements@gestures.zip"
+gnome-extensions install -f ~/Downloads/gestures.zip
+rm -f "$HOME/Downloads/gestures.zip"
