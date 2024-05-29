@@ -85,3 +85,7 @@ pip install gnome-extensions-cli
 
 gext disable dash-to-dock@micxgx.gmail.com
 gext install clipboard-indicator@tudmotu.com
+
+export GSETTINGS_SCHEMA_DIR=~/.local/share/gnome-shell/extensions/clipboard-indicator\@tudmotu.com/schemas/
+gsettings set org.gnome.shell.extensions.clipboard-indicator move-item-first true
+gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu
