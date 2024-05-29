@@ -65,6 +65,9 @@ sudo pamac install \
 	aws-cli-v2-bin \
 	fd \
 	lazygit \
+	npm \
+	go \
+	xclip \
 	neovim \
 	--no-confirm
 
