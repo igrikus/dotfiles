@@ -78,3 +78,10 @@ sudo systemctl enable --now docker.service
 sudo systemctl enable --now containerd.service
 sudo groupadd docker
 sudo usermod -aG docker "$USER"
+
+python -m venv venv
+source venv/bin/activate
+pip install gnome-extensions-cli
+
+gext disable dash-to-dock@micxgx.gmail.com
+gext install clipboard-indicator@tudmotu.com
