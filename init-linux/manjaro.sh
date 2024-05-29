@@ -7,6 +7,7 @@ sudo pamac update && sudo pamac upgrade --no-confirm
 reboot
 
 ## Shortcuts
+## To enable traces: dconf watch /
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ copy '<Primary>c'
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ paste '<Primary>v'
 
@@ -28,6 +29,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift
 gsettings set org.gnome.system.location enabled true
 gsettings set org.gnome.desktop.datetime automatic-timezone true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface clock-format "24h"
 # gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 
 gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-lock true
