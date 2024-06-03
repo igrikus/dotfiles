@@ -68,6 +68,7 @@ sudo pamac install \
 	kubectl \
 	helm \
 	aws-cli-v2-bin \
+	jq \
 	fd \
 	lazygit \
 	ripgrep \
