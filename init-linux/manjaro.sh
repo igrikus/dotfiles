@@ -57,6 +57,8 @@ gsettings set org.gnome.desktop.interface enable-hot-corners false
 
 ## Ignore duplicates in bash history
 echo "export HISTCONTROL=ignoreboth:erasedups" >>~/.bashrc
+## Useful alias
+echo "alias ll='ls -lah'" >>~/.bashrc
 
 ## Tailscale VPN requirements. Optional
 sudo systemctl enable --now systemd-resolved.service
