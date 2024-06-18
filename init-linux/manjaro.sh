@@ -113,7 +113,7 @@ python -m venv venv
 source venv/bin/activate
 pip install gnome-extensions-cli
 
-## I like dock actually...
+## I like dash actually...
 gext disable dash-to-dock@micxgx.gmail.com
 
 ## Essential multi-clipboard plugin
@@ -122,6 +122,7 @@ gext install clipboard-indicator@tudmotu.com
 ## Windows-style shortcuts
 export GSETTINGS_SCHEMA_DIR=~/.local/share/gnome-shell/extensions/clipboard-indicator\@tudmotu.com/schemas/
 gsettings set org.gnome.shell.extensions.clipboard-indicator move-item-first true
+gsettings set org.gnome.shell.keybindings toggle-message-tray "['']"
 gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu "['<Super>v']"
 
 ## Windows-style touchpad gestures plugin
