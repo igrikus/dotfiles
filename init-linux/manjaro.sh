@@ -1,10 +1,15 @@
-# Changing default shell
+## Changing default shell
 chsh "$USER" -s /bin/bash
 /bin/bash
 
-# Updating all Pamac packages
+## Updating all Pamac packages
 sudo pamac update && sudo pamac upgrade --no-confirm
 reboot
+
+## Enable AUR and Flatpak support in Pamac
+sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf
+sudo sed -Ei '/EnableFlatpak/s/^#//' /etc/pamac.conf
+sudo sed -Ei '/CheckFlatpakUpdates/s/^#//' /etc/pamac.conf
 
 ## Shortcuts
 ## To enable traces: dconf watch /
