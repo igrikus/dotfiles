@@ -44,8 +44,8 @@ gsettings set org.gnome.desktop.interface clock-format "24h"
 ## Wayland fractional scaling. Works bad right now, so it's disabled
 # gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 
-## QoL for text selection on touchpad
-gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-lock true
+## QoL for text selection on touchpad. Disabled cuz it's causing delays in copy text
+# gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-lock true
 
 ## Power button power off instead of suspend
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action "interactive"
@@ -54,6 +54,7 @@ gsettings set org.gnome.settings-daemon.plugins.power power-button-action "inter
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 
 ## Do not suspend on idle
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
