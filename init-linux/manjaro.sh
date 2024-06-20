@@ -137,3 +137,6 @@ gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu "['<Sup
 wget -O "$HOME/Downloads/gestures.zip" "https://github.com/sidevesh/gnome-gesture-improvements--transpiled/releases/download/30/gestureImprovements@gestures.zip"
 gnome-extensions install -f ~/Downloads/gestures.zip
 rm -f "$HOME/Downloads/gestures.zip"
+
+## Clear venv
+deactivate && rm -rf venv
