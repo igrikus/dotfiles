@@ -30,6 +30,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Su
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
 
 ## Alt-tab windows instead of applications
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 
