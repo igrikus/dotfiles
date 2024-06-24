@@ -8,6 +8,7 @@ reboot
 
 ## Enable AUR and Flatpak support in Pamac
 sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf
+sudo sed -Ei '/CheckAURUpdates/s/^#//' /etc/pamac.conf
 sudo sed -Ei '/EnableFlatpak/s/^#//' /etc/pamac.conf
 sudo sed -Ei '/CheckFlatpakUpdates/s/^#//' /etc/pamac.conf
 
@@ -139,4 +140,5 @@ gnome-extensions install -f ~/Downloads/gestures.zip
 rm -f "$HOME/Downloads/gestures.zip"
 
 ## Clear venv
-deactivate && rm -rf venv
+deactivate
+rm -rf venv
