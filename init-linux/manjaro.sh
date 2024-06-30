@@ -137,7 +137,17 @@ gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu "['<Sup
 ## Windows-style touchpad gestures plugin
 wget -O "$HOME/Downloads/gestures.zip" "https://github.com/sidevesh/gnome-gesture-improvements--transpiled/releases/download/30/gestureImprovements@gestures.zip"
 gnome-extensions install -f ~/Downloads/gestures.zip
+gext enable gestureImprovements@gestures
 rm -f "$HOME/Downloads/gestures.zip"
+
+# Aesthetics matters
+gext install blur-my-shell@aunetx
+export GSETTINGS_SCHEMA_DIR=~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/
+gsettings set org.gnome.shell.extensions.blur-my-shell.panel blur false
+
+gext install weatherornot@somepaulo.github.io
+GSETTINGS_SCHEMA_DIR=~/.local/share/gnome-shell/extensions/weatherornot\@somepaulo.github.io/schemas/
+gsettings set org.gnome.shell.extensions.weatherornot position 'left'
 
 ## Clear venv
 deactivate
