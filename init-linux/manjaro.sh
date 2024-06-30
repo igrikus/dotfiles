@@ -2,10 +2,6 @@
 chsh "$USER" -s /bin/bash
 /bin/bash
 
-## Updating all Pamac packages
-sudo pamac update && sudo pamac upgrade --no-confirm
-reboot
-
 ## Enable AUR and Flatpak support in Pamac
 sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf
 sudo sed -Ei '/CheckAURUpdates/s/^#//' /etc/pamac.conf
