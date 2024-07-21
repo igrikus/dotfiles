@@ -57,6 +57,9 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'no
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 gsettings set org.gnome.desktop.session idle-delay 0
 
+## Increase unresponsive apps timeout
+gsettings set org.gnome.mutter check-alive-timeout 30000
+
 ## Just not for me
 gsettings set org.gnome.desktop.interface enable-hot-corners false
 
@@ -86,25 +89,25 @@ gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnom
 
 ## Installing work tools
 sudo pamac install \
-	bash-completion \
-	docker \
-	docker-buildx \
-	docker-compose \
-	manjaro-pipewire \
-	terraform \
-	packer \
-	kubectl \
-	helm \
-	aws-cli-v2-bin \
-	jq \
-	fd \
-	lazygit \
-	ripgrep \
-	npm \
-	go \
-	xclip \
-	neovim \
-	--no-confirm
+  bash-completion \
+  docker \
+  docker-buildx \
+  docker-compose \
+  manjaro-pipewire \
+  terraform \
+  packer \
+  kubectl \
+  helm \
+  aws-cli-v2-bin \
+  jq \
+  fd \
+  lazygit \
+  ripgrep \
+  npm \
+  go \
+  xclip \
+  neovim \
+  --no-confirm
 
 git clone git@github.com:igrikus/LazyVim.git ~/.config/nvim
 
