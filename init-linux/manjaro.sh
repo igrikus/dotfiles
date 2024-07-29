@@ -87,6 +87,9 @@ sudo sed -i'.backup' -e 's/,"WebRTCPipeWireCapturer"/,"LebRTCPipeWireCapturer"/'
 ## Dash icon order
 gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.manjaro.pamac.manager.desktop']"
 
+## Wallpapers
+curl -s "https://raw.githubusercontent.com/simple-sunrise/Light-and-Dark-Wallpapers-for-Gnome/main/direct_install.sh" | bash
+
 ## Installing work tools
 sudo pamac install \
   bash-completion \
