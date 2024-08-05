@@ -114,6 +114,11 @@ sudo pamac install \
 
 git clone git@github.com:igrikus/LazyVim.git ~/.config/nvim
 
+## Set up nvim as default terminal editor
+echo "export EDITOR=nvim" >>~/.bashrc
+sudo echo "export EDITOR=nvim" | sudo tee -a /root/.bashrc >/dev/null
+
+## Configure docker to run without sudo
 sudo systemctl enable --now docker.service
 sudo systemctl enable --now containerd.service
 sudo groupadd docker
