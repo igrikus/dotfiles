@@ -90,6 +90,24 @@ gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnom
 ## Wallpapers
 curl -s "https://raw.githubusercontent.com/simple-sunrise/Light-and-Dark-Wallpapers-for-Gnome/main/direct_install.sh" | bash
 
+## Install good resource monitoring
+flatpak install -y net.nokyan.Resources
+
+## Set Windows-style shortcuts
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
+  "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Shift><Control>Escape'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "flatpak run net.nokyan.Resources"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "Resources"
+
+## Remove Gnome default monitoring
+sudo pamac remove gnome-system-monitor --no-confirm
+
+## Open Terminal with Ubuntu-style shortcut
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Control><Alt>T'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'gnome-terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Open Terminal'
+
 ## Installing work tools
 sudo pamac install \
   bash-completion \
