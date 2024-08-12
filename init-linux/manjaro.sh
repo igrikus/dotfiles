@@ -60,6 +60,9 @@ gsettings set org.gnome.desktop.session idle-delay 0
 ## Increase unresponsive apps timeout
 gsettings set org.gnome.mutter check-alive-timeout 30000
 
+## Disable middle-click paste
+gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
+
 ## Just not for me
 gsettings set org.gnome.desktop.interface enable-hot-corners false
 
