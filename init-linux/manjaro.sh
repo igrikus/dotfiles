@@ -130,8 +130,38 @@ sudo pamac install \
   npm \
   go \
   xclip \
+  git-delta \
   neovim \
   --no-confirm
+
+cat <<EOF >~/.gitconfig
+[core]
+	excludesfile = /home/igor/.config/git/ignore
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+
+[merge]
+  tool = nvim
+  conflictstyle = diff3
+
+[mergetool "nvim"]
+    cmd = nvim -f -c \"DiffviewOpen\"
+
+[mergetool]
+    prompt = false
+
+[diff]
+  colorMoved = default
+
+[alias]
+  mergetool = "!nvim -c DiffviewOpen"
+  dt = "! args=$@; shift $#; nvim -c \"DiffviewOpen \$args\""
+EOF
 
 git clone git@github.com:igrikus/LazyVim.git ~/.config/nvim
 
