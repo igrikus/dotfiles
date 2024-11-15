@@ -1,0 +1,50 @@
+" Use <space> as mapleader
+let mapleader = " "
+
+" Line number settings
+:set relativenumber
+:set number
+
+" Share system clipboard with yank mode
+set clipboard+=unnamed
+
+" Show a few lines of context around the cursor
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" Manipulate file tree
+Plug 'preservim/nerdtree'
+" Surround plugin
+Plug 'tpope/vim-surround'
+" Quickly move to any position
+Plug 'easymotion/vim-easymotion'
+
+" Move between tabs
+nnoremap H :tabprevious<CR>
+nnoremap L :tabnext<CR>
+
+" Activate easymotion
+map s <Plug>(easymotion-s)
+
+" Close current tab
+nnoremap <leader>bd :tabclose<CR>:tabprevious<CR>
+
+" Format when trying to save a file (muscle memory)
+nnoremap <C-s> :action ReformatCode<CR>
+
+" NerdTree bindings
+nnoremap <C-h> :NERDTreeFocus<CR>
+
+" Use ctrl-c and ctrl-v as an ide shortcut in normal and visual modes
+sethandler <C-C> n-v-i:ide
+sethandler <C-v> n-v-i:ide
+sethandler <C-\\> n-v-i:ide
