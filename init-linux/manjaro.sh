@@ -207,6 +207,8 @@ gext install weatherornot@somepaulo.github.io
 GSETTINGS_SCHEMA_DIR=~/.local/share/gnome-shell/extensions/weatherornot\@somepaulo.github.io/schemas/
 gsettings set org.gnome.shell.extensions.weatherornot position 'left'
 
+gext install unblank@sun.wxg@gmail.com
+
 ## Clear venv
 deactivate
 rm -rf venv
