@@ -98,7 +98,7 @@ flatpak install -y net.nokyan.Resources
 
 ## Set Windows-style shortcuts
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
-  "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+	"['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Shift><Control>Escape'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "flatpak run net.nokyan.Resources"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "Resources"
@@ -113,26 +113,26 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 
 ## Installing work tools
 sudo pamac install \
-  bash-completion \
-  docker \
-  docker-buildx \
-  docker-compose \
-  manjaro-pipewire \
-  terraform \
-  packer \
-  kubectl \
-  helm \
-  aws-cli-v2-bin \
-  jq \
-  fd \
-  lazygit \
-  ripgrep \
-  npm \
-  go \
-  xclip \
-  git-delta \
-  neovim \
-  --no-confirm
+	bash-completion \
+	docker \
+	docker-buildx \
+	docker-compose \
+	manjaro-pipewire \
+	terraform \
+	packer \
+	kubectl \
+	helm \
+	aws-cli-v2-bin \
+	jq \
+	fd \
+	lazygit \
+	ripgrep \
+	npm \
+	go \
+	xclip \
+	git-delta \
+	neovim \
+	--no-confirm
 
 cat <<EOF >~/.gitconfig
 [core]
