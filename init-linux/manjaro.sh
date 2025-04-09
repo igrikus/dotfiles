@@ -193,10 +193,7 @@ gsettings set org.gnome.shell.keybindings toggle-message-tray "['']"
 gsettings set org.gnome.shell.extensions.clipboard-indicator toggle-menu "['<Super>v']"
 
 ## Windows-style touchpad gestures plugin
-wget -O "$HOME/Downloads/gestures.zip" "https://github.com/sidevesh/gnome-gesture-improvements--transpiled/releases/download/30/gestureImprovements@gestures.zip"
-gnome-extensions install -f ~/Downloads/gestures.zip
-gext enable gestureImprovements@gestures
-rm -f "$HOME/Downloads/gestures.zip"
+gext install touchpad-gesture-customization@coooolapps.com
 
 # Aesthetics matters
 gext install blur-my-shell@aunetx
